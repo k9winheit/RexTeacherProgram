@@ -1,0 +1,35 @@
+{
+  "name": "electron-auto-update-example",
+  "version": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/k9winheit/myelectronapp.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "build": {
+    "appId": "com.example.NewElectronAutoUpdate",
+    "win": {
+      "target": "nsis"
+    },
+    "publish": {
+      "provider": "github",
+      "token": "66c0b483ffece253d00e9944ecaf03fc7c195e77"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.4",
+    "electron-builder": "^22.2.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.2.0"
+  }
+}
